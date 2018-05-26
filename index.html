@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ESP8266 Home Automation Server</title>
+	<link rel="stylesheet" type="text/css" href="Scripts/main.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="Scripts/GaugeMeter.js"></script>
+</head>
+
+<body>
+<br>
+<center>
+  <!--<button class="lights on" href="#">ON</button>-->
+
+<table style="width:auto">
+  <col width="300">
+  <tr>
+	<th></th>
+	<th><img src="Images/light.png" alt="Lights" height="150"></th>
+	<th><img src="Images/temperature.png" alt="Temperature sensors" height="150"></th>
+	<th><img src="Images/soil.png" alt="Soil" height="150"></th>
+  </tr>
+  
+  <col width="200">
+  <tr>
+	<td><img src="https://tschoehuijs.stackstorage.com/s/Y5MDo89EH0pUEYz" alt="Home Base" height="150"></td>
+	<td></td>
+	<td><div class="TempGauge" data-used="17" data-type="temperature"></div></td>
+	<td></td>
+  </tr>
+  
+  <col width="200">
+  <tr>
+	<td><img src="Images/tempbase.png" alt="Home Base" height="120"></td>
+	<td><button class="lights off" href="#">OFF</button></td>
+	<td></td>
+	<td><div class="GaugeMeter" data-percent="75" data-type="soil"></div></td>
+  </tr>
+</table>
+</center>
+
+<script>
+$(".TempGauge").gaugeMeter();
+$(".GaugeMeter").gaugeMeter();
+</script>
+
+</body>
+</html>
