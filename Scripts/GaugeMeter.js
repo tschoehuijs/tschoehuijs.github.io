@@ -10,7 +10,7 @@
  * This is a bug fixed and modified version of the AshAlom Gauge Meter.
  * Copyright 2018 Michael Wolf (Mictronics)
  * https://github.com/mictronics/GaugeMeter
- * 
+ *
  */
 !function ($) {
     $.fn.gaugeMeter = function (t) {
@@ -34,10 +34,9 @@
             label: "Temperature",
             label_color: "#FFF",
             text: "",
-            fill: "",
-            type: "temperature"
+            fill: ""
         }, t);
-        
+
         var defaultSoil = $.extend({
             id: "",
             percent: 50,
@@ -58,10 +57,9 @@
             label: "Soil",
             label_color: "#FFF",
             text: "",
-            fill: "",
-            type: "soil"
+            fill: ""
         }, t);
-        
+
         return this.each(function () {
 
             function getThemeColor(e) {
@@ -102,7 +100,7 @@
                 if(child.length !== 0){
                     child.html(r).css({color: fgcolor});
                     return;
-                }  
+                }
                 $("<span></span>").appendTo(t).html(r).css({
                     "line-height": option.size + "px",
                     "font-size": 0.22 * option.size + "px",
@@ -116,14 +114,14 @@
                         option[element] = t.data(element);
                     } else {
                         // choose temperature or soil gauge
-                        if(t.data("type")=="temperature"){
+                        if(t.data("label")=="Temperature"){
                             option[element] = $(defaultTemp).attr(element);
                         } else {
                             option[element] = $(defaultSoil).attr(element);
                         }
-                        
+
                     }
-                    
+
                     if(element === "fill"){
                         s = option[element];
                     }
@@ -154,7 +152,7 @@
                     drawGauge(Math.min(M, c) / 100);
                 }, p));
             }
-            
+
             $(this).attr("data-id", $(this).attr("id"));
             var r,
                 dataAttr = ["percent",
@@ -175,15 +173,14 @@
                     "label",
                     "label_color",
                     "text",
-                    "fill",
-                    "type"],
+                    "fill"],
                 option = {},
                 c = 0,
                 p = $(this),
                 s = false;
             p.addClass("gaugeMeter");
             getDataAttr(p);
-            
+
             if( option.text !== "" && option.text !== null && option.text !== undefined){
                 if(option.append !== "" && option.append !== null && option.append !== undefined){
                     r = option.text + "<u>" + option.append + "</u>";
@@ -198,7 +195,7 @@
                 if(option.prepend !== "" && option.prepend !== null && option.prepend !== undefined){
                     r = "<s>" + option.prepend + "</s>" + r;
                 }
-                
+
                 if(option.append !== "" && option.append !== null && option.append !== undefined){
                     if(Number.isInteger(option.used)){
                         r = option.used + "<u>" + option.append + "</u>"; //data?
@@ -217,25 +214,25 @@
                     c = parseInt(defaults.percent);
                 }
             }
-            if(c < 0) c = 0; 
+            if(c < 0) c = 0;
             if(c > 100) c = 100;
 
             option.fgcolor = getThemeColor(c);
             if(option.color !== "" && option.color !== null && option.color !== undefined){
                 option.fgcolor = option.color;
-            }            
-            
+            }
+
             if(option.animate_gauge_colors === true){
                 option.fgcolor = getThemeColor(c);
             }
             createSpanTag(p);
-            
+
             if(option.style !== "" && option.style !== null && option.style !== undefined){
                 createLabel(p, option.size / 13);
             }
-            
+
             $(this).width(option.size + "px");
-            
+
             var b = $("<canvas></canvas>").attr({width: option.size, height: option.size}).get(0),
                     g = b.getContext("2d"),
                     m = b.width / 2,
