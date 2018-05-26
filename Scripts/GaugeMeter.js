@@ -34,8 +34,7 @@
             label: "Temperature",
             label_color: "#FFF",
             text: "",
-            fill: "",
-            type: "temperature"
+            fill: ""
         }, t);
         
         var defaultSoil = $.extend({
@@ -58,8 +57,7 @@
             label: "Soil",
             label_color: "#FFF",
             text: "",
-            fill: "",
-            type: "soil"
+            fill: ""
         }, t);
         
         return this.each(function () {
@@ -116,7 +114,7 @@
                         option[element] = t.data(element);
                     } else {
                         // choose temperature or soil gauge
-                        if(t.data("type")=="temperature"){
+                        if(t.data("label")=="Temperature"){
                             option[element] = $(defaultTemp).attr(element);
                         } else {
                             option[element] = $(defaultSoil).attr(element);
@@ -175,8 +173,7 @@
                     "label",
                     "label_color",
                     "text",
-                    "fill",
-                    "type"],
+                    "fill"],
                 option = {},
                 c = 0,
                 p = $(this),
