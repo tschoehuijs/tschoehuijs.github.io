@@ -2,6 +2,7 @@ body {
 	font-family: sans-serif;
 	color: #444;
 	background-color: #ADD8E6;
+	padding-bottom: 50px;
 }
 
 table, th, td {
