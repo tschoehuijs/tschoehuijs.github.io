@@ -7,78 +7,181 @@ body {
 table, th, td {
 	border: 0px solid black;
 	text-align: center;
-height: 200px;
+	height: 200px;
 }
 
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 99%;
+	padding: 10px;
+	background-color: #ADD8E6;
+	color: DarkBlue;
+	text-align: center;
+}
+
+#left{
+	text-align: left;
+	float:left;
+	width:33%;
+}
+
+#right{
+	text-align: right;
+	float:right;
+	width:33%;
+}
+#center{
+	text-align: center;
+	margin:0 auto;
+	width:33%;
+}
 /* Gauges */
 
 .GaugeMeter {
-  position: Relative;
-  text-align: Center;
-  overflow: Hidden;
-  cursor: Default;
-  display: inline-block;
+	position: Relative;
+	text-align: Center;
+	overflow: Hidden;
+	cursor: Default;
+	display: inline-block;
 }
 
 .GaugeMeter SPAN, .GaugeMeter B {
-  width: 54%;
-  position: Absolute;
-  text-align: Center;
-  display: Inline-Block;
-  color: RGBa(0,0,0,.8);
-  font-weight: 100;
-  font-family: "Open Sans", Arial;
-  overflow: Hidden;
-  white-space: NoWrap;
-  text-overflow: Ellipsis;
-  margin: 0 23%;
+	width: 54%;
+	position: Absolute;
+	text-align: Center;
+	display: Inline-Block;
+	color: RGBa(0,0,0,.8);
+	font-weight: 100;
+	font-family: "Open Sans", Arial;
+	overflow: Hidden;
+	white-space: NoWrap;
+	text-overflow: Ellipsis;
+	margin: 0 23%;
 }
 
 .GaugeMeter S, .GaugeMeter U {
-  text-decoration: None;
-  font-size: .60em;
-  font-weight: 200;
-  opacity: .6;
+	text-decoration: None;
+	font-size: .60em;
+	font-weight: 200;
+	opacity: .6;
 }
 
 /* Light switches */
 
 .lights {
-
-  display: inline-block;
-  border: none;
-  border-radius: .3em;
-  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
-		  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
-  color: #fff;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-weight: 300;
-  font-size: 1.25em;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  padding: .5em 1.5em .75em;
-  position: relative;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
-  vertical-align: middle;
-  background-color: #3498db;
+	display: inline-block;
+	border: none;
+	border-radius: .3em;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+	color: #fff;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size: 1.25em;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	padding: .5em 1.5em .75em;
+	position: relative;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+	vertical-align: middle;
+	background-color: #3498db;
+	text-transform: uppercase;
 }
 
-  .lights:active {
-    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
-  	margin-top: .25em;
-    padding-bottom: .5em;
-  }
+.lights:active {
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	margin-top: .25em;
+	padding-bottom: .5em;
+}
 
-  .lights:active, .lights:focus {
-    outline: none;
-  }
+.lights:active, .lights:focus {
+	outline: none;
+}
 
-  .on {
-    background-color: #1abc9c;
-  }
+.on {
+	background-color: #1abc9c;
+}
 
-  .off {
-    background-color: #e65d4f;
-  }
+.off {
+	background-color: #e65d4f;
+}
+
+.refresh {
+	display: inline-block;
+	border: none;
+	border-radius: .3em;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+	color: #fff;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size: 1.25em;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	padding: .5em 1.5em .75em;
+	position: relative;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+	vertical-align: middle;
+	background-color: #007bff;
+}
+
+.refresh:active {
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	margin-top: .25em;
+	padding-bottom: .5em;
+}
+
+.refresh:active, .refresh:focus {
+	outline: none;
+}
+
+.round {
+	display: inline-block;
+	border: none;
+	border-radius: .3em;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+	color: #fff;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size: 1.25em;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	padding: .5em 1.5em .75em;
+	position: relative;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+	vertical-align: middle;
+	background-color: #007bff;
+
+	transition: all 300ms ease-in-out;
+}
+
+.round:active {
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	margin-top: .25em;
+	padding-bottom: .5em;
+}
+
+.round:active, .round:focus {
+	outline: none;
+}
+
+.round:hover {
+	background-color: red;
+}
+
+.round:hover .restart:before{
+	content:"Restart?"
+}
+
+.restart:before{
+	content:"  v1.1  "
+}

@@ -11,40 +11,68 @@
 </head>
 
 <body>
-<br>
-<center>
-  <!--<button class="lights on" href="#">ON</button>-->
+	<br>
+	<center>
+		<!--<button class="lights on" href="#">ON</button>-->
 
-<table style="width:auto">
-  <col width="300">
-  <tr>
-	<th></th>
-	<th><img src="Images/light.png" alt="Lights" height="150"></th>
-	<th><img src="Images/temperature.png" alt="Temperature sensors" height="150"></th>
-	<th><img src="Images/soil.png" alt="Soil" height="150"></th>
-  </tr>
+		<table style="width:auto">
+			<col width="300">
+			<tr>
+				<th></th>
+				<th><img src="Images/light.png" alt="Lights" height="150"></th>
+				<th><img src="Images/temperature.png" alt="Temperature sensors" height="150"></th>
+				<th><img src="Images/soil.png" alt="Soil" height="150"></th>
+			</tr>
 
-  <col width="200">
-  <tr>
-	<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/homebase.png" alt="Home Base" height="150"></td>
-	<td></td>
-	<td><div class="GaugeMeter" data-used="17" data-type="temperature"></div></td>
-	<td></td>
-  </tr>
+			<col width="200">
+			<tr>
+				<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/homebase.png" alt="Home Base" height="150"></td>
+				<td></td>
+				<td><div class="GaugeMeter" data-used="17" data-type="temperature"></div></td>
+				<td></td>
+			</tr>
 
-  <col width="200">
-  <tr>
-	<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/node.png" alt="Node" height="120"></td>
-	<td><button class="lights off" href="#">OFF</button></td>
-	<td></td>
-	<td><div class="GaugeMeter" data-percent="75" data-type="soil"></div></td>
-  </tr>
-</table>
-</center>
+			<col width="200">
+			<tr>
+				<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/node.png" alt="Node" height="120"></td>
+				<td><button class="lights off" href="#">OFF</button></td>
+				<td></td>
+				<td><div class="GaugeMeter" data-percent="75" data-type="soil"></div></td>
+			</tr>
 
-<script>
-$(".GaugeMeter").gaugeMeter();
-</script>
+			<col width="200">
+			<tr>
+				<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/node.png" alt="Node" height="120"></td>
+				<td><button class="lights off" href="#">OFF</button></td>
+				<td></td>
+				<td><div class="GaugeMeter" data-percent="75" data-type="soil"></div></td>
+			</tr>
+
+			<col width="200">
+			<tr>
+				<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/node.png" alt="Node" height="120"></td>
+				<td><button class="lights off" href="#">off</button></td>
+				<td></td>
+				<td><div class="GaugeMeter" data-percent="75" data-type="soil"></div></td>
+			</tr>
+		</table>
+
+		<br><br><br><br><br><br><br><br><br><br>
+	</center>
+
+	<script>
+	$(".GaugeMeter").gaugeMeter();
+	</script>
+
+	<div class="footer">
+		<div id="left">Made by<br>Tom Schoehuijs</div>
+		<div id="right">
+			<a href=""><button class="round" href="#">
+				<span class="restart"></span>
+			</button></a>
+		</div>
+		<div id="center"><a href=""><button class="refresh" href="#">Refresh</button></a></div>
+	</div>
 
 </body>
 </html>
