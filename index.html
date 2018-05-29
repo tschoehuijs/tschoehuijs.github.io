@@ -4,7 +4,7 @@
 <head>
 	<title>ESP8266 Home Automation Server</title>
 	<link rel="stylesheet" type="text/css" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Scripts/main.css">
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/x-icon" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/favicon.ico">
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -12,10 +12,7 @@
 </head>
 
 <body>
-	<br>
 	<center>
-		<!--<button class="lights on" href="#">ON</button>-->
-
 		<table style="width:auto">
 			<col width="300">
 			<tr>
@@ -45,7 +42,6 @@
 	</center>
 
 	<div class="footer">
-		<!-- <div id="left"><img src="signature.png" height="48"></div> -->
 		<div id="left">
 			<div id='ss_menu'>
 				<div> <a class="fa fa-linkedin" href="http://linkedin.com/in/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a> </div>
@@ -60,7 +56,7 @@
 			</div>
 		</div>
 		<div id="right">
-			<a href=""><button class="version" href="#"><span class="restart"></span></button></a>
+			<a href="restart"><button class="version"><span class="restart"></span></button></a>
 		</div>
 		<div id="center"><a href=""><button class="refresh" href="#">Refresh</button></a></div>
 	</div>
@@ -78,11 +74,9 @@
 			menu.css('transform', 'rotate(' + rot + 'deg)');
 			menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
 			if ((rot / 180) % 2 == 0) {
-				//Moving in
 				toggle.parent().addClass('ss_active');
 				toggle.addClass('close');
 			} else {
-				//Moving Out
 				toggle.parent().removeClass('ss_active');
 				toggle.removeClass('close');
 			}
