@@ -45,7 +45,7 @@
             total: null,
             size: 200,
             prepend: "",
-            append: " &Omega;",
+            append: " &#37;",
             theme: "Red-Gold-Green",
             color: "",
             back: "RGBa(0,0,0,.1)",
