@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif;
 	color: #444;
-	background-color: #ADD8E6;
+	background-color: #b3e4ff;
 	padding-bottom: 50px;
 }
 
@@ -17,7 +17,7 @@ table, th, td {
 	bottom: 0;
 	width: 99%;
 	padding: 10px;
-	background-color: #ADD8E6;
+	background-color: #b3e4ff;
 	color: DarkBlue;
 	text-align: center;
 }
