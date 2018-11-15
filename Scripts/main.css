@@ -65,18 +65,18 @@ table, th, td {
 	text-align: Center;
 	display: Inline-Block;
 	color: RGBa(0,0,0,.8);
-	font-weight: 100;
+	font-weight: 90;
 	font-family: "Open Sans", Arial;
 	overflow: Hidden;
 	white-space: NoWrap;
 	text-overflow: Ellipsis;
-	margin: 0 23%;
+	margin: -10% 23%;
 }
 
 .GaugeMeter S, .GaugeMeter U {
 	text-decoration: None;
-	font-size: .60em;
-	font-weight: 200;
+	font-size: .54em;
+	font-weight: 180;
 	opacity: .6;
 }
 
@@ -119,8 +119,7 @@ table, th, td {
 }
 
 .off {
-	background-color: #e65d4f;
-}
+	background-color: #e65d4f;}
 
 .refresh {
 	display: inline-block;
@@ -196,7 +195,7 @@ table, th, td {
 }
 
 .restart:before{
-	content:"v1.03"
+	content:"v1.04"
 }
 
 @-webkit-keyframes
@@ -360,4 +359,37 @@ badbounce {  0%, 100% {
 #ss_menu div:nth-child(3) {
   top: -75px;
   right: -0px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    width: 70%;
+}
+
+.card {
+    background-color: #edd59e;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    width: 200px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 20px 16px;
+    height: 340px;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
 }

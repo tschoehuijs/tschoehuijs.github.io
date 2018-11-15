@@ -1,98 +1,121 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>ESP8266 Home Automation Server</title>
-	<link rel="stylesheet" type="text/css" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Scripts/main.css">
-	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="icon" type="image/x-icon" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/favicon.ico">
-
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Scripts/GaugeMeter.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>ESP8266 Home Automation Server</title>
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/U2/Scripts/main.css">
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/U2/Scripts/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/U2/favicon.ico">
+<script src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/U2/Scripts/jquery-2.1.4.min.js.download"></script>
+<script src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/U2/Scripts/GaugeMeter.js.download"></script>
 </head>
-
 <body>
-	<center>
-		<table style="width:auto">
-			<col width="300">
-			<tr>
-				<th></th>
-				<th><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/light.png" alt="Lights" height="150"></th>
-				<th><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/temperature.png" alt="Temperature sensors" height="150"></th>
-				<th><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/soil.png" alt="Soil" height="150"></th>
-			</tr>
+<center>
 
-			<col width="200">
-			<tr>
-				<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/homebase.png" alt="Home Base" height="150"></td>
-				<td></td>
-				<td><div class="GaugeMeter" data-used="17" data-type="temperature"></div></td>
-				<td></td>
-			</tr>
+<div class="flex-container">
 
-			<col width="200">
-			<tr>
-				<td><img src="https://rawgit.com/tschoehuijs/tschoehuijs.github.io/master/Images/node.png" alt="Node" height="120"></td>
-				<td><button class="lights off" href="#">OFF</button></td>
-				<td></td>
-				<td><div class="GaugeMeter" data-percent="75" data-type="soil"></div></td>
-			</tr>
-		</table>
+<div class="card">
+  <div class="container">
+    <img src="./ESP8266 Home Automation Server_files/homebase.png" alt="Home Base" height="80" style="padding-top: 15px;">
+    <p>Homebase</p>
+  </div>
+  <div class="GaugeMeter gaugeMeter" data-used="22" data-type="temperature" style="width: 200px;"><span style="line-height: 200px; font-size: 44px;">22<u>�C</u></span><b style="line-height: 276.923px; color: rgb(255, 255, 255);">Temperature</b><canvas width="200" height="200"></canvas></div>
+</div>
 
-	</center>
+<div class="card">
+  <div class="container">
+    <img src="./ESP8266 Home Automation Server_files/node.png" alt="Node" height="80" style="padding-top: 15px;">
+    <p>Living room</p>
+  </div>
+  <div class="GaugeMeter gaugeMeter" data-used="21" data-type="temperature" style="width: 200px;"><span style="line-height: 200px; font-size: 44px;">21<u>�C</u></span><b style="line-height: 276.923px; color: rgb(255, 255, 255);">Temperature</b><canvas width="200" height="200"></canvas></div>
+</div>
 
-	<div class="footer">
-		<div id="left">
-			<div id='ss_menu'>
-				<div> <a class="fa fa-linkedin" href="http://linkedin.com/in/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a> </div>
-				<div> <a class="fa fa-twitter" href="http://twitter.com/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a> </div>
-				<div> <a class="fa fa-facebook-official" href="http://facebook.com/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a> </div>
-				<div class='menu'>
-					<div class='share' id='ss_toggle' data-rot='180'>
-						<div class='circle'></div>
-						<div class='bar'></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="right">
-			<a href="restart"><button class="version"><span class="restart"></span></button></a>
-		</div>
-		<div id="center"><a href=""><button class="refresh" href="#">Refresh</button></a></div>
-	</div>
+<div class="card">
+  <div class="container">
+    <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Christmas-PNG/Christmas_Winter_House_Transparent_PNG_Clip_Art_Image.png?m=1507172112" alt="Christmas" height="90" style="padding-top: 15px; margin-bottom: -10px;">
+    <p>Christmas</p>
+  </div><br><br><br>
+  <form action="https://www.w3schools.com/action_page.php" method="post" target="_blank">
+  <input type = "hidden" name = "christmas" value = "toggle"/>
+  <button type="submit" formmethod="post" class="lights off" style="padding-top: 15px;">off</button>
+</form>
+</div>
 
-	<script>
-	$(".GaugeMeter").gaugeMeter();
 
-	$(document).ready(function(ev) {
-		var toggle = $('#ss_toggle');
-		var menu = $('#ss_menu');
-		var rot;
+<div class="card">
+  <div class="container">
+    <img src="./ESP8266 Home Automation Server_files/node.png" alt="Node" height="80" style="padding-top: 15px;">
+    <p>Kitchen</p>
+  </div>
+  <div class="GaugeMeter gaugeMeter" data-used="10" data-type="temperature" style="width: 200px;"><span style="line-height: 200px; font-size: 44px;">10<u>�C</u></span><b style="line-height: 276.923px; color: rgb(255, 255, 255);">Temperature</b><canvas width="200" height="200"></canvas></div>
+</div>
 
-		$('#ss_toggle').on('click', function(ev) {
-			rot = parseInt($(this).data('rot')) + 180;
-			menu.css('transform', 'rotate(' + rot + 'deg)');
-			menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
-			if ((rot / 180) % 2 == 0) {
-				toggle.parent().addClass('ss_active');
-				toggle.addClass('close');
-			} else {
-				toggle.parent().removeClass('ss_active');
-				toggle.removeClass('close');
-			}
-			$(this).data('rot', rot);
-		});
+<div class="card">
+  <div class="container">
+    <img src="./ESP8266 Home Automation Server_files/node.png" alt="Node" height="80" style="padding-top: 15px;">
+    <p>Closet</p>
+  </div>
+  <div class="GaugeMeter gaugeMeter" data-used="40" data-type="temperature" style="width: 200px;"><span style="line-height: 200px; font-size: 44px;">40<u>�C</u></span><b style="line-height: 276.923px; color: rgb(255, 255, 255);">Temperature</b><canvas width="200" height="200"></canvas></div>
+</div>
 
-		menu.on('transitionend webkitTransitionEnd oTransitionEnd', function() {
-			if ((rot / 180) % 2 == 0) {
-				$('#ss_menu div i').addClass('ss_animate');
-			} else {
-				$('#ss_menu div i').removeClass('ss_animate');
-			}
-		});
+<div class="card">
+  <div class="container">
+    <img src="./ESP8266 Home Automation Server_files/node.png" alt="Node" height="80" style="padding-top: 15px;">
+    <p>Cactus</p>
+  </div>
+  <div class="GaugeMeter gaugeMeter" data-used="15" data-type="soil" style="width: 200px;"><span style="line-height: 200px; font-size: 44px;">50<u>�C</u></span><b style="line-height: 276.923px; color: rgb(255, 255, 255);">Temperature</b><canvas width="200" height="200"></canvas></div>
+</div>
 
-	});
-	</script>
+
+
+</div><br><br><br><br></center>
+<div class="footer">
+<div id="left">
+<div id="ss_menu">
+<div>
+<a class="fa fa-linkedin" href="http://linkedin.com/in/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a>
+</div>
+<div>
+<a class="fa fa-twitter" href="http://twitter.com/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a>
+</div>
+<div>
+<a class="fa fa-facebook-official" href="http://facebook.com/tschoehuijs" target="_blank" style="text-decoration:none;color:#fff"></a>
+</div>
+<div class="menu">
+<div class="share" id="ss_toggle" data-rot="180">
+<div class="circle"></div>
+<div class="bar"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="right">
+<form action="http://86.83.106.80:8085/" method="get">
+  <input type = "hidden" name = "button" value = "restart" />
+  <button class="version" type="submit" formmethod="post"><span class="restart"></span></button>
+</form>
+</div>
+<div id="center"><a href="http://86.83.106.80:8085/"><button class="refresh" href="#">Refresh</button></a></div>
+</div>
+<script>
+$(".GaugeMeter").gaugeMeter();
+$(document).ready(function(ev) { var toggle = $('#ss_toggle');
+var menu = $('#ss_menu');
+var rot;
+$('#ss_toggle').on('click', function(ev) { rot = parseInt($(this).data('rot')) + 180;
+menu.css('transform', 'rotate(' + rot + 'deg)');
+menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
+if ((rot / 180) % 2 == 0) { toggle.parent().addClass('ss_active');
+toggle.addClass('close');
+} else { toggle.parent().removeClass('ss_active');
+toggle.removeClass('close');
+} $(this).data('rot', rot);
+});
+menu.on('transitionend webkitTransitionEnd oTransitionEnd', function() { if ((rot / 180) % 2 == 0) { $('#ss_menu div i').addClass('ss_animate');
+} else { $('#ss_menu div i').removeClass('ss_animate');
+} });
+});
+</script>
 
 </body>
 </html>
