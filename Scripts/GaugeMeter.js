@@ -12,6 +12,7 @@
  * https://github.com/mictronics/GaugeMeter
  *
  */
+ 
 !function ($) {
     $.fn.gaugeMeter = function (t) {
         var defaultTemp = $.extend({ // default
