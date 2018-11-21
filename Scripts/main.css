@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif;
 	color: #444;
-	background-color: #b3e4ff;
+	background-color: #1D65A6;
 	padding-bottom: 50px;
 }
 
@@ -17,7 +17,7 @@ table, th, td {
 	bottom: 0;
 	width: 99%;
 	padding: 10px;
-	background-color: #b3e4ff;
+	background-color: #1D65A6;
 	color: DarkBlue;
 	text-align: center;
 }
@@ -371,7 +371,7 @@ badbounce {  0%, 100% {
 }
 
 .card {
-	background-color: #edd59e;
+	background-color: #99cfe0;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
 	transition: 0.3s;
 	width: 200px;
