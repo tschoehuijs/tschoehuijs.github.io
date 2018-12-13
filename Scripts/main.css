@@ -274,7 +274,7 @@ badbounce {  0%, 100% {
 	box-shadow: 0 0 0 2px white;
 	border-radius: 50%;
 
-	bottom: 20px;
+	bottom: 15px;
 	width: 40px;
 	height: 40px;
 	color: #fff;
@@ -283,7 +283,7 @@ badbounce {  0%, 100% {
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	transition: all 1s ease;
-	left: 20px;
+	left: 15px;
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
