@@ -195,7 +195,7 @@ table, th, td {
 	}
 
 	.restart:before{
-		content:"v1.05"
+		content:"v1.06"
 	}
 
 	@-webkit-keyframes
